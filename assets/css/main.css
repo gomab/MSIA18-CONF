@@ -403,11 +403,16 @@ ul li {
 /* 
  * 6.3 Section: Speaker
  */
+ .speakers {
+   background-color: #f8f8f8;
+ } 
+
+
 .speaker {
-  text-align: center;
   color: #313131;
   text-transform: uppercase;
   margin: 25px 0;
+  background-color: #f8f8f8;
 }
 .speaker h4 {
   margin-top: 15px;
@@ -450,6 +455,7 @@ ul li {
 /* 
  * 6.6 Section: Schedule
  */
+
 .schedule-box {
   position: relative;
   background-color: #000;
@@ -469,7 +475,7 @@ ul li {
 }
 
 /* 
- * 6.7 Section: Schedule
+ * 6.7 Section: Partenaires
  */
 .partner {
   background-color: #f8f8f8;
