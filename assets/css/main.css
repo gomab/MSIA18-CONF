@@ -633,6 +633,27 @@ ul li {
   padding: 15px 15px 15px 35px;
 }
 
+
+.about ul li.ecole-ingenieurs a {
+  color: #5D89DA ;
+}
+.about ul li.ecole-alternance a {
+  color: #00a490 ;
+}
+.about ul li.ecole-managers a {
+  color: #EB7500 ;
+}
+
+.about ul li.ecole-certification a {
+  color: #779801;
+}
+
+
+
+
+
+
+
 /* 
  * 6.9 Section: photos
  */
