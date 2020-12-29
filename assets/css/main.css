@@ -441,6 +441,48 @@ ul li {
   opacity: .7;
 }
 
+#about .card .card-header {
+	text-transform : uppercase;
+	text-align : center;
+	border : 1px solid white;
+	font-weight : bold;
+	color : #FFF;
+}
+
+#about .card {
+	margin-bottom : 2em;
+}
+
+#about .card-body {
+	padding : 2px;
+	border : 1px solid white;
+}
+
+#about .card.themeA{
+	background-color : #00a490;
+	padding : 1px;
+}
+#about .card.themeB{
+	background-color : #000;
+	padding : 1px;
+}
+#about .card.themeC{
+	background-color : #000;
+	padding : 1px;
+}
+#about .card.themeD{
+	background-color : #000;
+	padding : 1px;
+}
+#about .card.themeE{
+	background-color : #000;
+	padding : 1px;
+}
+#about .card.themeF{
+	background-color : #000;
+	padding : 1px;
+}
+
 /* 
  * 6.4 Section: Registration & Pricing
  */
@@ -647,11 +689,11 @@ ul li {
 }
 
 .about ul.ecoles li a{
-	text-align : left;
+	text-align : center;
 	color : #FFF;
 	font-size : x-small;
-	 
 	line-height : 1px;
+
 	
 }
 .about ul.ecoles li a:hover{
