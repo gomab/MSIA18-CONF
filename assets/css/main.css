@@ -404,7 +404,17 @@ display: block;
 .about figure {
   margin-bottom: 25px;
 }
-
+.about .col-md-4 {
+  text-align: center;
+}
+.about .btn-group .col-md-4 a.btn{
+  margin-bottom: 10px;
+  width: 80%;
+}
+.about .row {
+  margin-top : 20px;
+  margin-bottom:20px;
+}
 /* 
  * 6.2 Section: Facts
  */
