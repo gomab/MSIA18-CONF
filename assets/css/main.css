@@ -47,6 +47,10 @@ h6 {
   font-weight: 700;
   font-family : QuantumFont;
 }
+h3 {
+  text-align: center !important;
+  font-size: 30px;
+}
 
 h2 a {
   color: #FFFFFF;
@@ -231,7 +235,7 @@ ul li {
 }
 .bg-image::before, .bg-image-1::before, .bg-image-2::before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -240,13 +244,16 @@ ul li {
 
 .bg-image-1 {
   background: url(../images/backgrounds/bg-1.jpg) no-repeat center center/cover;
+  
+  
 }
 .bg-image-1::before {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7) ;
 }
 
 .bg-image-2 {
   background: url(../images/backgrounds/bg-2.jpg) no-repeat center bottom/cover;
+  
 }
 .bg-image-2::before {
   background-color: rgba(0, 0, 0, 0.7);
@@ -274,7 +281,6 @@ ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #000 ;
-  display: none;
   -webkit-transition: all 0.2s linear 0s;
           transition: all 0.2s linear 0s;
 }
@@ -311,7 +317,11 @@ display: block;
   -webkit-transition: all 0.2s linear 0s;
           transition: all 0.2s linear 0s;
 }
-
+.logocesi {
+  position : absolute;
+  top:10px;
+  left : 10px; 
+}
 .site-branding {
   float: left;
   margin-top: 0 !important;
@@ -340,7 +350,8 @@ display: block;
   text-align: center;
   /*background: url(../images/backgrounds/header.jpg) no-repeat center center/cover;*/
   display: table;
-  background-color: #FFF;
+  background-color: #000;
+  
 }
 .site-header::before {
   content: "";
@@ -360,12 +371,13 @@ display: block;
   z-index: 1;
   padding: 0 15px;
   display: table-cell;
-  vertical-align: middle;
-  height: 30vh;
+  vertical-align: bottom;
+  height: 20vh;
   background-color: #FFF ;
+  padding-bottom: 6.5px;
 }
 .site-header .intro h2 {
-  margin-top: 0px;
+  margin-top: 50px;
   font-size: 25px;
   font-weight: 300;
 }
@@ -382,7 +394,7 @@ display: block;
 
 @media (min-width: 768px) {
   .navbar-custom {
-    background-color: transparent;
+    background-color: #000;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -426,6 +438,9 @@ display: block;
   color: #fff;
   text-align: center;
   font-weight: 400;
+}
+.facts h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* 
@@ -843,4 +858,7 @@ display: block;
 }
 #Streaming h4 {
   color : white;
+}
+#Streaming iframe {
+  width : 100%;
 }
