@@ -1,4 +1,4 @@
-/* 
+/*
  * 1. Google Font
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
@@ -10,7 +10,7 @@
   font-family: QuantumFont;
   src: url(../fonts/Quantum.otf);
 }
-/* 
+/*
  * 2.0 Global Style
  */
 html {
@@ -30,7 +30,15 @@ body {
 #site-nav .container {
   width: 1340px !important;
 }
-
+#site-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar-items{
+  margin-left: auto;
+  margin-right: 20px;
+}
 a {
   color: #000;
 }
@@ -166,10 +174,10 @@ ul li {
   text-align: center;
 }
 
-/* 
+/*
  * 3.0 Helper Class
  */
-/* 
+/*
  * 3.1 Helper Class: font-weight
  */
 .font-300 {
@@ -184,7 +192,7 @@ ul li {
   font-weight: 700;
 }
 
-/* 
+/*
  * 3.2 Helper Class: margin
  */
 .mt0 {
@@ -199,14 +207,14 @@ ul li {
   margin-top: 20px;
 }
 
-/* 
+/*
  * 3.3 Helper Class: list
  */
 .list-arrow-right li::before {
   content: "\f3d3";
 }
 
-/* 
+/*
  * 3.4 Helper Class: button
  */
 .btn-white {
@@ -227,13 +235,13 @@ ul li {
   background-color: #000;
 }
 
-/* 
+/*
  * 3.5 Helper Class: background
  */
 .bg-image, .bg-image-1, .bg-image-2 {
   position: relative;
 }
-.bg-image::before, .bg-image-1::before, .bg-image-2::before {
+.bg-image::before,.bg-image-2::before {
   content: "";
   position: relative;
   top: 0;
@@ -242,10 +250,22 @@ ul li {
   left: 0;
 }
 
-.bg-image-1 {
+.bg-image-1:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.69;*/
   background: url(../images/backgrounds/bg-1.jpg) no-repeat center center/cover;
-  
-  
+  /* opacity: 1; */
+}
+
+.bg-image-1 {
+  z-index: 10;
+  background-color: black;
 }
 .bg-image-1::before {
   background-color: rgba(0, 0, 0, 0.7) ;
@@ -253,7 +273,7 @@ ul li {
 
 .bg-image-2 {
   background: url(../images/backgrounds/bg-2.jpg) no-repeat center bottom/cover;
-  
+
 }
 .bg-image-2::before {
   background-color: rgba(0, 0, 0, 0.7);
@@ -272,7 +292,7 @@ ul li {
     text-align: left;
   }
 }
-/* 
+/*
  * 4.0 Navigation
  */
 .navbar-custom {
@@ -318,9 +338,7 @@ display: block;
           transition: all 0.2s linear 0s;
 }
 .logocesi {
-  position : absolute;
-  top:10px;
-  left : 10px; 
+  margin: -15px 0 -35px;
 }
 .site-branding {
   float: left;
@@ -338,12 +356,38 @@ display: block;
 .site-branding .logo:focus, .site-branding .logo:hover {
   text-decoration: none;
 }
+.navbar-header,.logocesi{
+  display: none;
+}
+@media (min-width: 1500px) {
+  .navbar-header{
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .logocesi{
+    display: block !important;
+  }
+  #navbar-items{
+    margin: 0 auto !important;
+  }
+}
 
-/* 
+@media (max-width: 1000px) {
+  nav{
+    display: none !important;
+  }
+  .site-header{
+    margin-top: 0 !important;
+  }
+
+}
+/*
  * 5.0 Site Header
  */
 .site-header {
   width: 100%;
+  margin-top: 111px;
   /*height: 100%;
   min-height: 100vh;*/
   position: relative;
@@ -351,7 +395,7 @@ display: block;
   /*background: url(../images/backgrounds/header.jpg) no-repeat center center/cover;*/
   display: table;
   background-color: #000;
-  
+
 }
 .site-header::before {
   content: "";
@@ -371,8 +415,8 @@ display: block;
   z-index: 1;
   padding: 0 15px;
   display: table-cell;
-  vertical-align: bottom;
-  height: 20vh;
+  vertical-align: middle;
+  /*height: 20vh;*/
   background-color: #FFF ;
   padding-bottom: 6.5px;
 }
@@ -404,11 +448,11 @@ display: block;
     margin-left: 0;
   }
 }
-/* 
+/*
  * 6.0 Section
  */
-/* 
- * 6.1 Section: About 
+/*
+ * 6.1 Section: About
  */
 .about .section-title {
   margin: 0 0 25px;
@@ -427,7 +471,7 @@ display: block;
   margin-top : 20px;
   margin-bottom:20px;
 }
-/* 
+/*
  * 6.2 Section: Facts
  */
 .facts i {
@@ -443,12 +487,12 @@ display: block;
   font-family: 'Roboto', sans-serif;
 }
 
-/* 
+/*
  * 6.3 Section: Speaker
  */
  .speakers {
    background-color: #f8f8f8;
- } 
+ }
 
 
 .speaker {
@@ -460,14 +504,14 @@ display: block;
 .speaker h4 {
   margin-top: 15px;
   margin-bottom: 5px;
-  color : #00a490 ; 
+  color : #00a490 ;
 }
 .speaker p {
   margin-bottom: 5px;
   color : #00a490
 }
 .speaker img {
-	
+
 	border-right: 	solid #00a490;
 	border-right-width : 20px;
 	border-top: solid #00a490;
@@ -523,10 +567,10 @@ display: block;
 	padding : 1px;
 }
 
-/* 
+/*
  * 6.4 Section: Registration & Pricing
  */
-/* 
+/*
  * 6.5 Section: Contribution
  */
 .contribution {
@@ -534,7 +578,7 @@ display: block;
   color: #fff;
 }
 
-/* 
+/*
  * 6.6 Section: Schedule
  */
 .schedule .subject {
@@ -635,7 +679,7 @@ display: block;
 
 
 
-/* 
+/*
  * 6.7 Section: Partenaires
  */
 .partner {
@@ -678,7 +722,7 @@ display: block;
   background: url(../images/partner/partner-8.png) no-repeat center center/contain;
 }
 
-/* 
+/*
  * 6.8 Section: FAQ
  */
 .about .panel-heading {
@@ -711,7 +755,7 @@ display: block;
   margin-top: 15px;
 }
 .about .panel-default > .panel-heading {
-  color: #FFF;
+  color: white;
   background-color: #000000;
   border-color: #000;
   border-radius: 0;
@@ -726,7 +770,7 @@ display: block;
 
 
 .about ul.ecoles li {
-	
+
 	list-style : none;
 	float : left;
 	color: #fff;
@@ -734,7 +778,7 @@ display: block;
 	width: 100px;
 	margin-left : 1%;
 	padding : 1%;
-	
+
 }
 
 .about ul.ecoles li a{
@@ -743,7 +787,7 @@ display: block;
 	font-size : x-small;
 	line-height : 1px;
 
-	
+
 }
 .about ul.ecoles li a:hover{
 	text-decoration : none;
@@ -771,7 +815,7 @@ display: block;
 
 
 
-/* 
+/*
  * 6.9 Section: photos
  */
 .grid {
@@ -823,7 +867,7 @@ display: block;
     width: 25%;
   }
 }
-/* 
+/*
  * 7.0 Site-footer
  */
 .site-footer {
@@ -846,7 +890,7 @@ display: block;
   opacity: 0.8;
 }
 
-/* 
+/*
  * Streaming
  */
 #Streaming {
